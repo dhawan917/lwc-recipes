@@ -9,4 +9,9 @@ public with sharing class AccountController {
     public static Account getSingleAccount() {
         return [SELECT Id, Name, Phone, Type FROM Account LIMIT 1];
     }
+
+    @AuraEnabled
+    public static void methodTest(){
+        System.debug('Test Method Created');
+    }
 }
